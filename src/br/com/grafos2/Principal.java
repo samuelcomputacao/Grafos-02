@@ -60,7 +60,7 @@ public class Principal {
 		List<String> circuito = new ArrayList<String>();
 
 		// String v = buscaInicio(vertices);
-		String v = vertices.get(0);
+		String v = buscaGerente(vertices);
 		circuito.add(v);
 
 		while (!graph.edgeSet().isEmpty()) {
@@ -69,8 +69,6 @@ public class Principal {
 			DefaultEdge aresta = null;
 			if (arestasIncidentes.size() == 1) {
 				aresta = arestasIncidentes.get(0);
-			} else if (arestasIncidentes.size() == 0) {
-				break;
 			} else {
 				for (DefaultEdge a : arestasIncidentes) {
 					if (!ehPonte(a, graph)) {
@@ -92,12 +90,20 @@ public class Principal {
 
 		String inicio = circuito.get(0);
 		String fim = circuito.get(circuito.size() - 1);
+		
 		if (inicio.equals(fim)) {
 			if (allVertesVisited(circuito, grafoOriginal.vertexSet())) {
 				return criaCircuito(circuito);
 			}
 		}
 
+		return null;
+	}
+
+	private static String buscaGerente(List<String> vertices) {
+		for(String vertice: vertices) {
+			if(vertice.equals("C")) return vertice;
+		}
 		return null;
 	}
 
@@ -175,9 +181,4 @@ public class Principal {
 		}
 		return true;
 	}
-
-	public static void importar() {
-
-	}
-
 }
