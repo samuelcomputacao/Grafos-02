@@ -10,13 +10,15 @@ import java.util.Scanner;
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
-
+/**
+ * Classe responsável por importar um grafo a patir de um arquivo gml.
+ */
 public class ImportGraph {
 
 	/**
-	 * Responsável por criar um grafo
-	 * 
-	 * @return um grafo simples
+	 * Método responsável por importar o grafo
+	 * @param path : Uma String representando o caminho do grafo a ser importado
+	 * @return um grafo simples que corrsponde ao grafo do pth passado como parâmetro
 	 */
 	@SuppressWarnings("resource")
 	public static Graph<String, DefaultEdge> importar(String path) {
