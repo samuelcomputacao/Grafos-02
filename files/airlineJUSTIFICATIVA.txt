@@ -1,0 +1,5 @@
+O layout escolhido foi o circular,
+pois com esse layout foi possível visualizar o grafo de uma maneira amigável.
+As adjacências ficaram mais visíveis e foi evitado arcos que não fossem uma reta.
+Também foi possível visualizar aqueles vertices que tem um maior número de adjacências, 
+pois esses vertices se apresentam de um tamanho diferenciado no grafo. 
